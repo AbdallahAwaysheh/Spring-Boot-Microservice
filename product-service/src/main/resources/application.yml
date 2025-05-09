@@ -1,0 +1,52 @@
+spring:
+  application:
+    name: product-service
+  datasource:
+    url: jdbc:mysql://localhost:3306/e-shop?createDatabaseIfNotExist=true&useSSL=false&serverTimezone=UTC
+    username: root
+    password: 1234
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL8Dialect
+jwt:
+  secret: 688b590c9ef53472ca732e5ca8429e001c9847dee65603321c6b9e9bbb583eb5
+server:
+  port: 8003
+
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+
+
+
+
+
+
+
+
+
+
+
+
+
+    #  liquibase:
+    #    changeLog: classpath:/db/changelog/app-changelog.xml
+    #    default-schema: ecommerce
+    #  rabbitmq:
+    #    host: "localhost"
+    #    port: 5672
+    #    username: "guest"
+    #    password: "guest"
+#    template:
+#      retry:
+#        enabled: true
+#        initial-interval: "2s"
